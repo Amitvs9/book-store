@@ -1,0 +1,222 @@
+[
+    {
+      "title": "SQL Notes for Professionals",
+      "isbn": "1001631195638",
+      "price": "$0.00",
+      "image": "https://itbook.store/img/books/1001631195638.png",
+      "url": "https://itbook.store/books/1001631195638",
+      "authors": "Stack Overflow Community",
+      "publisher": "Self-publishing",
+      "pages": "160",
+      "language": "English"
+    },
+    {
+      "title": "Java Notes for Professionals",
+      "isbn": "1001630936399",
+      "price": "$0.00",
+      "image": "https://itbook.store/img/books/1001630936399.png",
+      "url": "https://itbook.store/books/1001630936399",
+      "authors": "Stack Overflow Community",
+      "publisher": "Self-publishing",
+      "pages": "981",
+      "language": "English"
+    },
+    {
+      "title": "Swift Notes for Professionals",
+      "isbn": "1001629462353",
+      "price": "$0.00",
+      "image": "https://itbook.store/img/books/1001629462353.png",
+      "url": "https://itbook.store/books/1001629462353",
+      "authors": "Julien Vehent",
+      "publisher": "Manning",
+      "pages": "290",
+      "language": "English"
+    },
+    {
+      "title": "React JS Notes for Professionals",
+      "isbn": "1001629286154",
+      "price": "$0.00",
+      "image": "https://itbook.store/img/books/1001629286154.png",
+      "url": "https://itbook.store/books/1001629286154",
+      "authors": "Stack Overflow Community",
+      "publisher": "Self-publishing",
+      "pages": "190",
+      "language": "English"
+    },
+    {
+      "title": "TypeScript Notes for Professionals",
+      "isbn": "1001622115721",
+      "price": "$0.00",
+      "image": "https://itbook.store/img/books/1001622115721.png",
+      "url": "https://itbook.store/books/1001622115721",
+      "authors": "Stack Overflow Community",
+      "publisher": "Self-publishing",
+      "pages": "300",
+      "language": "English"
+    },
+    {
+      "title": "Python Notes for Professionals",
+      "isbn": "1001621860589",
+      "price": "$0.00",
+      "image": "https://itbook.store/img/books/1001621860589.png",
+      "url": "https://itbook.store/books/1001621860589",
+      "authors": "Stack Overflow Community",
+      "publisher": "Self-publishing",
+      "pages": "400",
+      "language": "English"
+    },
+    {
+      "title": "Seeing Theory",
+      "isbn": "1001620981541",
+      "price": "$0.00",
+      "image": "https://itbook.store/img/books/1001620981541.png",
+      "url": "https://itbook.store/books/1001620981541",
+      "authors": "Stack Overflow Community",
+      "publisher": "Self-publishing",
+      "pages": "100",
+      "language": "English"
+    },
+    {
+      "title": "MySQL Notes for Professionals",
+      "isbn": "1001620983366",
+      "price": "$0.00",
+      "image": "https://itbook.store/img/books/1001620983366.png",
+      "url": "https://itbook.store/books/1001620983366",
+      "authors": "Stack Overflow Community",
+      "publisher": "Self-publishing",
+      "pages": "140",
+      "language": "English"
+    },
+    {
+      "title": "The Vue.js Handbook",
+      "isbn": "1001615902053",
+      "price": "$0.00",
+      "image": "https://itbook.store/img/books/1001615902053.png",
+      "url": "https://itbook.store/books/1001615902053",
+      "authors": "Stack Overflow Community",
+      "publisher": "Self-publishing",
+      "pages": "120",
+      "language": "English"
+    },
+    {
+      "title": "The Node.js Handbook",
+      "isbn": "1001614599609",
+      "price": "$0.00",
+      "image": "https://itbook.store/img/books/1001614599609.png",
+      "url": "https://itbook.store/books/1001614599609",
+      "authors": "Stack Overflow Community",
+      "publisher": "Self-publishing",
+      "pages": "90",
+      "language": "English"
+    },
+    {
+      "title": "Azure Tips and Tricks",
+      "isbn": "9781732704121",
+      "price": "$0.00",
+      "image": "https://itbook.store/img/books/9781732704121.png",
+      "url": "https://itbook.store/books/9781732704121",
+      "authors": "Stack Overflow Community",
+      "publisher": "Self-publishing",
+      "pages": "290",
+      "language": "English"
+    },
+    {
+      "title": "Learn Programming",
+      "isbn": "9781722834920",
+      "price": "$16.83",
+      "image": "https://itbook.store/img/books/9781722834920.png",
+      "url": "https://itbook.store/books/9781722834920",
+      "authors": "Stack Overflow Community",
+      "publisher": "Self-publishing",
+      "pages": "132",
+      "language": "English"
+    },
+    {
+      "title": "Graph Databases For Beginners",
+      "isbn": "1001606307637",
+      "price": "$0.00",
+      "image": "https://itbook.store/img/books/1001606307637.png",
+      "url": "https://itbook.store/books/1001606307637",
+      "authors": "Stack Overflow Community",
+      "publisher": "Self-publishing",
+      "pages": "290",
+      "language": "English"
+    },
+    {
+      "title": "Elementary Algorithms",
+      "isbn": "1001606307729",
+      "price": "$0.00",
+      "image": "https://itbook.store/img/books/1001606307729.png",
+      "url": "https://itbook.store/books/1001606307729",
+      "authors": "Stack Overflow Community",
+      "publisher": "Self-publishing",
+      "pages": "320",
+      "language": "English"
+    },
+    {
+      "title": "Windows PowerShell Networking Guide",
+      "isbn": "1001606307964",
+      "price": "$0.00",
+      "image": "https://itbook.store/img/books/1001606307964.png",
+      "url": "https://itbook.store/books/1001606307964",
+      "authors": "Stack Overflow Community",
+      "publisher": "Self-publishing",
+      "pages": "120",
+      "language": "English"
+    },
+    {
+      "title": "Operating Systems: From 0 to 1",
+      "isbn": "1001606140658",
+      "price": "$0.00",
+      "image": "https://itbook.store/img/books/1001606140658.png",
+      "url": "https://itbook.store/books/1001606140658",
+      "authors": "Stack Overflow Community",
+      "publisher": "Self-publishing",
+      "pages": "290",
+      "language": "English"
+    },
+    {
+      "title": "Java Web Scraping Handbook",
+      "isbn": "1001606140805",
+      "price": "$0.00",
+      "image": "https://itbook.store/img/books/1001606140805.png",
+      "url": "https://itbook.store/books/1001606140805",
+      "authors": "Stack Overflow Community",
+      "publisher": "Self-publishing",
+      "pages": "130",
+      "language": "English"
+    },
+    {
+      "title": "Coffee Break Python Slicing",
+      "isbn": "1001605784161",
+      "price": "$0.00",
+      "image": "https://itbook.store/img/books/1001605784161.png",
+      "url": "https://itbook.store/books/1001605784161",
+      "authors": "Stack Overflow Community",
+      "publisher": "Self-publishing",
+      "pages": "180",
+      "language": "English"
+    },
+    {
+      "title": "The Basics of User Experience Design",
+      "isbn": "1001601301730",
+      "price": "$0.00",
+      "image": "https://itbook.store/img/books/1001601301730.png",
+      "url": "https://itbook.store/books/1001601301730",
+      "authors": "Stack Overflow Community",
+      "publisher": "Self-publishing",
+      "pages": "150",
+      "language": "English"
+    },
+    {
+      "title": "3D Game Development with LWJGL 3",
+      "isbn": "1001601302020",
+      "price": "$0.00",
+      "image": "https://itbook.store/img/books/1001601302020.png",
+      "url": "https://itbook.store/books/1001601302020",
+      "authors": "Stack Overflow Community",
+      "publisher": "Self-publishing",
+      "pages": "201",
+      "language": "English"
+    }
+]
