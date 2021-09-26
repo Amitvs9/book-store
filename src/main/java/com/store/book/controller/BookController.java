@@ -32,7 +32,7 @@ public class BookController {
      *
      * @return the amount paid per user
      */
-    @GetMapping
+    @GetMapping("/books")
     public ResponseEntity<List<Book>> getBooks() {
         return new ResponseEntity<>(bookService.getAllBooks(), HttpStatus.OK);
     }

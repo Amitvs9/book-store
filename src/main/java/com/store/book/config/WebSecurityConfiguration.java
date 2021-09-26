@@ -33,7 +33,9 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                     "/h2-console/**",
                     "/",
                     "/bookstore/authenticate",
-                    "/bookstore/hello"
+                    "/bookstore/hello",
+                    "/bookstore/books",
+                   "/bookstore/books/{isbn}"
 
     };
 
