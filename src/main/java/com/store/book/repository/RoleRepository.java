@@ -1,6 +1,6 @@
 package com.store.book.repository;
 
-import com.store.book.entities.Book;
+import com.store.book.entities.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -8,9 +8,9 @@ import org.springframework.stereotype.Repository;
  * @author Amit Vs
  */
 @Repository
-public interface BookRepository extends JpaRepository<Book, Long> {
+public interface RoleRepository extends JpaRepository<Role, Long> {
 
-    Book findByIsbn(String isbn);
+    Role findByName(String name);
 
 
 }

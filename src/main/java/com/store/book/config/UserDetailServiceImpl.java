@@ -12,6 +12,8 @@ import java.util.Collections;
 /**
  * UserDetailServiceImpl
  * Overrides loadUserByUsername to use custom user entity
+ *
+ * @author Amit Vs
  */
 @Component
 public class UserDetailServiceImpl implements UserDetailsService {
@@ -31,10 +33,10 @@ public class UserDetailServiceImpl implements UserDetailsService {
      */
     @Override
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
-        User user = userRepository.findById(userName).orElse(null);
+        User user = userRepository.findByUsername(userName).orElse(null);
         if (user == null) {
             throw new UsernameNotFoundException(userName);
         }
-        return new org.springframework.security.core.userdetails.User(user.getUserName(), user.getPassword(), Collections.emptyList());
+        return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), Collections.emptyList());
     }
 }

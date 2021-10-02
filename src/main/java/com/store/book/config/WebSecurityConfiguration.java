@@ -1,5 +1,8 @@
 package com.store.book.config;
 
+import com.store.book.service.UserDetailsServiceImp;
+import com.store.book.service.UserService;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;
@@ -18,6 +21,8 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 /**
  * WebSecurityConfiguration
  * Extends WebSecurityConfigurerAdapter and sets CORS policy custom UserDetailService
+ *
+ * @author Amit V
  */
 @EnableWebSecurity
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
@@ -25,24 +30,13 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Value("${jwt.secret}")
     private String authenticationSigningSecret;
 
-    private final BCryptPasswordEncoder bCryptPasswordEncoder;
-    private final UserDetailsService userDetailsService;
-
-
     private static final String[] AUTH_WHITELIST = {
                     "/h2-console/**",
                     "/",
                     "/bookstore/authenticate",
-                    "/bookstore/hello",
-                    "/bookstore/books",
-                   "/bookstore/books/{isbn}"
+                    "/bookstore/logedinuser"
 
     };
-
-    public WebSecurityConfiguration(BCryptPasswordEncoder bCryptPasswordEncoder, UserDetailsService userDetailsService) {
-        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
-        this.userDetailsService = userDetailsService;
-    }
 
     /**
      * @param http Spring HttpSecurity
@@ -69,8 +63,18 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
      */
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder);
+        auth.userDetailsService(userDetailsService()).passwordEncoder(bCryptPasswordEncoder());
 
+    }
+
+    @Bean
+    public UserDetailsService userDetailsService() {
+        return new UserDetailsServiceImp();
+    };
+
+    @Bean
+    public BCryptPasswordEncoder bCryptPasswordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 
     /**
@@ -100,5 +104,12 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
         return authenticationManager();
     }
 
+    @Bean
+    public ModelMapper modelMapper() {
+
+        ModelMapper modelMapper;
+        modelMapper = new ModelMapper();
+        return modelMapper;
+    }
 }
 

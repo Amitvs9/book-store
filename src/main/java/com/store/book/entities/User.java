@@ -1,33 +1,53 @@
 package com.store.book.entities;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
- * User
+ * User entity
+ *
+ * @author Amit Vs
  */
-@Entity
-@NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Builder
+@Table(name = "users")
 public class User {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+
     @NotEmpty
-    @Size(min= 5,message = "User name should be at least 5 characters long")
-    @Column(name = "userName")
-    private String userName;
+    private String username;
+
     @NotEmpty
-    @Size(min= 8,message = "Password name should be at least 8 characters long")
     private String password;
 
+    @ManyToMany
+    @JoinTable(name = "users_role", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<Role> roles = new HashSet<>();
+
+
+    public void addRole(Role userRole) {
+        getRoles().add(userRole);
+    }
 }

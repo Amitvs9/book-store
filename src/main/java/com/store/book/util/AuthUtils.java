@@ -2,9 +2,11 @@ package com.store.book.util;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import lombok.experimental.UtilityClass;
 
 import java.util.Date;
 
+@UtilityClass
 public class AuthUtils {
     public static String generateJWT(String userName, String authenticationSigningSecret) {
 

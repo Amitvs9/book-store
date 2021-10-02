@@ -1,7 +1,7 @@
 package com.store.book.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.store.book.domain.UserCreateDTO;
+import com.store.book.domain.UserDTO;
 import com.store.book.util.AuthUtils;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -21,6 +21,8 @@ import java.io.IOException;
  * Extend UsernamePasswordAuthenticationFilter and
  * overrides attemptAuthentication to use custom UserCreateDTO in request
  * overrides successfulAuthentication to generate custom header in response 'Authorization' containing JWT for further requests
+ *
+ * @author Amit Vs
  */
 public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 
@@ -42,14 +44,14 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
      * Adds custom header on successful authentication
      * @param request http request
      * @param response http response
-     * @return
-     * @throws AuthenticationException
+     * @return userDTO userdto
+     * @throws AuthenticationException ex
      */
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
         try {
-            UserCreateDTO user = new ObjectMapper().readValue(request.getInputStream(), UserCreateDTO.class);
-            return authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(user.getUserName(), user.getPassword()));
+            UserDTO user = new ObjectMapper().readValue(request.getInputStream(), UserDTO.class);
+            return authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
         } catch (IOException ioe) {
             throw new RuntimeException("Could not read request" + ioe);
 
