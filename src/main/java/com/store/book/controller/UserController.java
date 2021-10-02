@@ -67,16 +67,4 @@ public class UserController {
         return userService.signInUserAndGenerateJWT(user);
     }
 
-
-    /**
-     * get details of current logged in user
-     *
-     * @param principal principle
-     * @Retrun User
-     */
-    @GetMapping(value = "/logedinuser", produces = MediaType.APPLICATION_JSON_VALUE)
-    public UserDetails currentUser(Principal principal) {
-        return userService.loggedInUser(principal);
-    }
-
 }

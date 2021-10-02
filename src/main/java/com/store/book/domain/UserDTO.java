@@ -1,9 +1,7 @@
 package com.store.book.domain;
 
-import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.Getter;
 
 import javax.validation.constraints.NotEmpty;
 
@@ -13,11 +11,10 @@ import javax.validation.constraints.NotEmpty;
  *
  * @author Amit Vs
  */
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Builder
+@Getter
 public class UserDTO {
+
     @NotEmpty
     private String username;
 

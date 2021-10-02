@@ -3,6 +3,7 @@ package com.store.book.service;
 import com.store.book.entities.Role;
 import com.store.book.entities.User;
 import com.store.book.repository.UserRepository;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -20,6 +21,7 @@ import java.util.Optional;
  * @author Amit Vs
  */
 @Component
+@NoArgsConstructor
 public class UserDetailsServiceImp implements UserDetailsService {
 
     @Autowired

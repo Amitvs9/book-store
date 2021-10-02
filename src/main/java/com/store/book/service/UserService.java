@@ -79,17 +79,10 @@ public class UserService {
     private void authenticateUser(User user) {
         try {
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
-        }catch (DisabledException | BadCredentialsException ex) {
+        } catch (AuthenticationException ex) {
             log.error("User login attempt failed for {} reason : {}", user.getUsername(), ex.getLocalizedMessage());
             throw new BookStoreException(BookStoreErrorConstants.ERROR_BAD_CREDENTIALS_E1001, BookStoreErrorConstants.BAD_CREDENTIALS);
-        }catch (AuthenticationException aex){
-            log.error("User login attempt failed for {} reason : {}", user.getUsername(), aex.getLocalizedMessage());
-            throw new BookStoreException(BookStoreErrorConstants.ERROR_BAD_CREDENTIALS_E1001, BookStoreErrorConstants.BAD_CREDENTIALS);
         }
-    }
-
-    public UserDetails loggedInUser(Principal principal) {
-        return getUserDetails(principal.getName());
     }
 
     private UserDetails getUserDetails(String username) {

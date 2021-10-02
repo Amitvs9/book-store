@@ -46,7 +46,10 @@ public class UserServiceTest {
     private AuthenticationManager authenticationManager;
 
     @Mock
-    BCryptPasswordEncoder bCryptPasswordEncoder;
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
+
+    @Mock
+    private UserDetailsServiceImp userDetailsServiceImp;
 
     @Before
     public void init() {
@@ -75,9 +78,17 @@ public class UserServiceTest {
     @Test
     public void testSignInUserAndGenerateJWT() {
         UserDetails userDetails = Mockito.mock(UserDetails.class);
-        when(userDetailsService.loadUserByUsername(anyString())).thenReturn(userDetails);
+        when(userDetailsServiceImp.loadUserByUsername(anyString())).thenReturn(userDetails);
         Assert.assertNotNull(userService.signInUserAndGenerateJWT(DataFeeder.formUser()));
     }
+
+    @Test(expected = BookStoreException.class)
+    public void testSignInUserAndGenerateJWTWhenUserDetailsIsNull() {
+        UserDetails userDeçtails = Mockito.mock(UserDetails.class);
+        when(userDetailsServiceImp.loadUserByUsername(anyString())).thenReturn(null);
+        userService.signInUserAndGenerateJWT(DataFeeder.formUser());
+    }
+
 
     @Test(expected = BookStoreException.class)
     public void testAuthenticateUser() {

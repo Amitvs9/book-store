@@ -1,0 +1,13 @@
+[
+    {
+      "title": "Java Book",
+      "isbn": "12345678",
+      "price": "$100",
+      "image": "https://itbook.store/img/books/1001631195638.png",
+      "url": "https://itbook.store/books/1001631195638",
+      "authors": "James Gosling",
+      "publisher": "Self-publishing",
+      "pages": "160",
+      "language": "English"
+    }
+]
